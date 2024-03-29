@@ -2,32 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
+/*
+  - light: https://www.realtimecolors.com/?colors=82705e-fff7e0-c5e98b-e8d8b0-ff8a8a&fonts=Roboto%20Slab-Poppins
+  - dark: https://www.realtimecolors.com/?colors=9b8c7f-1f1000-575e3f-5e5140-993d2f&fonts=Roboto%20Slab-Poppins
+*/
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --gradient-start: var(--color-primary);
+    --gradient-end: var(--color-secondary);
+    --color-text: 130 112 94;
+    --color-background: 255 247 224;
+    --color-primary: 197 233 139;
+    --color-secondary: 232 216 176;
+    --color-accent: 255 138 138;
+  }
+  .dark {
+    --color-text: 155 140 127;
+    --color-background: 31 16 0;
+    --color-primary: 87 94 63;
+    --color-secondary: 94 81 64;
+    --color-accent: 153 61 47;
+  }
+  body {
+    color: rgb(var(--color-text));
+    background: rgb(var(--color-background));
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
   }
 }
