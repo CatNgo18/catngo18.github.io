@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
-import { Roboto_Slab, Poppins } from "next/font/google";
+import { Roboto_Slab, Poppins, Shrikhand } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
-const poppins = Poppins({
+export const poppins = Poppins({
     subsets: ['latin'],
-    weight: '700',
+    weight: '400',
     variable: '--font-poppins',
     display: 'swap',
 })
 
-const roboto_slab = Roboto_Slab({
+export const roboto_slab = Roboto_Slab({
+    subsets: ['latin'],
+    weight: ['400','700'],
+    variable: '--font-roboto-slab',
+    display: 'swap',
+})
+
+export const shrikhand = Shrikhand({
     subsets: ['latin'],
     weight: '400',
-    variable: '--font-roboto-slab',
+    variable: '--font-shrikhand',
     display: 'swap',
 })
 
@@ -28,7 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${roboto_slab.variable}`}>{children}</body>
+      <body className={`${poppins.variable} ${roboto_slab.variable} ${shrikhand.variable}`}>
+        <NavBar/>
+        {children}
+      </body>
     </html>
   );
 }

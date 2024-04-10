@@ -2,23 +2,12 @@ import Link from 'next/link';
 
 const NavBar = () => {
     return (
-        <ul>
-            <li>
-                <Link href="/">Home</Link>
-            </li>
-            <li>
-                <Link href="/skills">Skills</Link>
-            </li>
-            <li>
-                <Link href="/projects">Projects</Link>
-            </li>
-            <li>
-                <Link href="/contact">Resume</Link>
-            </li>
-            <li>
-                <Link href="/contact">Contact</Link>
-            </li>
-      </ul>
+        <div className='fixed top-1 left-1/2 -translate-x-1/2 text-center flex justify-around w-1/2 mx-auto'>
+            <Link href="#main-section">Main</Link>
+            <Link href="#experience-section">Experience</Link>
+            <Link href="#projects-section">Projects</Link>
+            <Link href="#contact-section">Contact</Link>
+      </div>
     );
 };
 
