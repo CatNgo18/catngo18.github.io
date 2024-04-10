@@ -1,4 +1,4 @@
-import { poppins, shrikhand } from "@/app/layout";
+import { shrikhand } from "@/app/font";
 
 function Main() {
     return (
@@ -6,7 +6,7 @@ function Main() {
             <h1 style={{fontFamily: `var(${shrikhand.variable})`}}>
                 Cattien Ngo
             </h1>
-            <p >
+            <p>
                 Full Stack Software Engineer and Web Developer
             </p>
         </div>
