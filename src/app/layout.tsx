@@ -2,22 +2,23 @@ import type { Metadata } from "next";
 import { Roboto_Slab, Poppins, Shrikhand } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import { NextFontWithVariable } from "next/dist/compiled/@next/font";
 
-export const poppins = Poppins({
+export const poppins: NextFontWithVariable = Poppins({
     subsets: ['latin'],
     weight: '400',
     variable: '--font-poppins',
     display: 'swap',
 })
 
-export const roboto_slab = Roboto_Slab({
+export const roboto_slab: NextFontWithVariable = Roboto_Slab({
     subsets: ['latin'],
     weight: ['400','700'],
     variable: '--font-roboto-slab',
     display: 'swap',
 })
 
-export const shrikhand = Shrikhand({
+export const shrikhand: NextFontWithVariable = Shrikhand({
     subsets: ['latin'],
     weight: '400',
     variable: '--font-shrikhand',
