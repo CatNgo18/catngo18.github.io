@@ -30,8 +30,9 @@ const config: Config = {
         '5xl': '4.210rem',
       },
       fontFamily: {
-        heading: ['var(--font-roboto-slab)'],
-        body: ['var(--font-poppins)'],
+        'shrikhand': ['var(--font-shrikhand'],
+        'roboto-slab': ['var(--font-roboto-slab)'],
+        'poppins': ['var(--font-poppins)'],
       },
       fontWeight: {
         normal: '400',

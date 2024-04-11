@@ -1,9 +1,7 @@
-import { shrikhand } from "@/app/font";
-
 function Main() {
     return (
         <div id='main-section' className='pt-10'>
-            <h1 style={{fontFamily: `var(${shrikhand.variable})`}}>
+            <h1 className="font-shirkhand">
                 Cattien Ngo
             </h1>
             <p>
