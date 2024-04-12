@@ -40,7 +40,6 @@ function Experience() {
         )}
         <Link href="/resume">View Full Resume</Link>
       </div>
-
     </div>
   )
 }
