@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${roboto_slab.variable} ${shrikhand.variable}`}>
+      <body className={`${poppins.variable} ${roboto_slab.variable} ${shrikhand.variable} w-screen`}>
         <NavBar/>
         {children}
       </body>

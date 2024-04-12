@@ -14,11 +14,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        'text': 'rgb(var(--color-text)) / <alpha-value>',
-        'background': 'rgb(var(--color-background)) / <alpha-value>',
-        'primary': 'rgb(var(--color-primary)) / <alpha-value>',
-        'secondary': 'rgb(var(--color-secondary)) / <alpha-value>',
-        'accent': 'rgb(var(--color-accent)) / <alpha-value>',
+        'text': 'rgb(var(--color-text))',
+        'background': 'rgb(var(--color-background))',
+        'primary': 'rgb(var(--color-primary))',
+        'secondary': 'rgb(var(--color-secondary))',
+        'accent': 'rgb(var(--color-accent))',
       },
       fontSize: {
         sm: '0.750rem',
@@ -33,12 +33,8 @@ const config: Config = {
         'shrikhand': ['var(--font-shrikhand'],
         'roboto-slab': ['var(--font-roboto-slab)'],
         'poppins': ['var(--font-poppins)'],
-      },
-      fontWeight: {
-        normal: '400',
-        bold: '700',
-      },
-    },
+      }
+    }
   },
   plugins: [],
 };

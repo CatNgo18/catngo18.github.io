@@ -5,7 +5,7 @@ import Contact from "@/components/Sections/Contact";
 
 function App() {
   return (
-    <div className="flex flex-col gap-96">
+    <div className="flex flex-col gap-10">
       <Main/>
       <Experience/>
       <Projects/>

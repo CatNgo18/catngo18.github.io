@@ -34,10 +34,13 @@ function Experience() {
       <h2>
         Experience
       </h2>
-      {experiences.map((experience: Experience, index: number) => 
-        <ExperienceEntry {...experience} key={`experience-${index}`}/>
-      )}
-      <Link href="/resume">View Full Resume</Link>
+      <div className="flex flex-col items-center">
+        {experiences.map((experience: Experience, index: number) => 
+          <ExperienceEntry {...experience} key={`experience-${index}`}/>
+        )}
+        <Link href="/resume">View Full Resume</Link>
+      </div>
+
     </div>
   )
 }

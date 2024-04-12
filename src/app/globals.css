@@ -18,7 +18,7 @@
     --gradient-end: var(--color-secondary);
     --color-text: 130 112 94;
     --color-background: 255 247 224;
-    --color-primary: 197 233 139;
+    --color-primary: 187 220 133;
     --color-secondary: 232 216 176;
     --color-accent: 255 138 138;
   }
@@ -34,14 +34,32 @@
     background: rgb(var(--color-background));
     text-align: center;
     font-size: 1rem;
+    font-weight: 400;
   }
   h1 {
     font-family: var(--font-shrikhand);
     font-size: 4rem;
   }
-  h2 {
+  h2, h3, h4, h5, h6 {
     font-family: var(--font-roboto-slab);
     font-weight: 700;
+  }
+  h2 {
+    font-weight: 700;
     font-size: 2rem;
+  }
+  h3 {
+    color: rgb(var(--color-accent));
+  }
+  h5 {
+    color: rgb(var(--color-text) / 50%);
+  }
+  a {
+    font-family: var(--font-roboto-slab);
+    font-weight: 700;
+  }
+  :not(.navbar) > a {
+    color: rgb(var(--color-primary));
+    text-decoration: underline;
   }
 }

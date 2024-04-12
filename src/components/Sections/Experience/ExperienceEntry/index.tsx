@@ -3,10 +3,10 @@ import { Experience } from "..";
 
 export const ExperienceEntry: React.FunctionComponent<Experience> = props => {
     return (
-        <div>
-            <h3>{`${props.startDate}${props.endDate && `- ${props.endDate}`}`}</h3>
-            <div className="flex">
-                <div className="w-px bg-primary"/>
+        <div className="text-left w-3/4">
+            <h3 className="text-accent font-bold">{`${props.startDate}${props.endDate && `- ${props.endDate}`}`}</h3>
+            <div className="flex flex-row">
+                <div className="flex-none w-px bg-accent mx-3"/>
                 <div>
                     <h4>{props.jobTitle}</h4>
                     {props.additionalJobTitles?.length && 
@@ -14,15 +14,20 @@ export const ExperienceEntry: React.FunctionComponent<Experience> = props => {
                             <h5 key={`${props.jobTitle.replace(' ', '-')}-${index}`}>{title}</h5>
                         )
                     }
-                    <ul>
+                    <ul className="list-disc ml-5">
                         {props.responsibilities.map((desc: string, index: number) => 
                                 <li key={`${props.jobTitle.replace(' ', '-')}-responsibility-${index}`}>{desc}</li>
                             )
                         }
                     </ul>
-                    <div>
+                    <div className="flex flex-row gap-3 m-3">
                         {props.skills.map((skill: string, index: number) => 
-                                <div key={`${props.jobTitle.replace(' ', '-')}-skill-${index}`}>{skill}</div>
+                                <div
+                                    className="bg-secondary/50 text-text/75 font-medium px-4 py-1 rounded-3xl"
+                                    key={`${props.jobTitle.replace(' ', '-')}-skill-${index}`}
+                                >
+                                    {skill}
+                                </div>
                             )
                         }
                     </div>
