@@ -33,12 +33,17 @@
     color: rgb(var(--color-text));
     background: rgb(var(--color-background));
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 400;
   }
   h1 {
     font-family: var(--font-shrikhand);
     font-size: 4rem;
+    text-shadow: 0px 4px 4px rgb(var(--color-background)/25%), 0 0 0 #000, 0px 4px 4px rgb(var(--color-background)/25%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: rgb(var(--color-text)/70%);
   }
   h2, h3, h4, h5, h6 {
     font-family: var(--font-roboto-slab);
