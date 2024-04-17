@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ProjectEntry } from "./ProjectEntry";
+import { SkillSums } from "@/components/SkillSums";
 
 export interface Project {
   title: string;
@@ -55,6 +56,7 @@ function Projects() {
       <h2>
         Projects
       </h2>
+      <SkillSums parent={'projects'} skills={projects.map((project: Project) => project.skills).flat()}/>
       <div className="flex flex-col items-center">
         {projects.map((project: Project, index: number) => 
           <ProjectEntry {...project} key={`project-${index}`}/>
