@@ -19,7 +19,7 @@ const countSkills = (skills: string[]) => {
     return countedSkills;
 };
 
-const skillSumColors = ['accent', 'primary', 'text', 'secondary'];
+const skillSumColors = ['bg-accent', 'bg-primary', 'bg-text', 'bg-secondary'];
 
 export const SkillSums: React.FunctionComponent<Prop> = props => {
     const countedSkills = countSkills(props.skills);
@@ -32,7 +32,7 @@ export const SkillSums: React.FunctionComponent<Prop> = props => {
             .sort((a,b) => b[1] - a[1]) // Sort by skill tag count
             .map((skill: [string, number], index: number) => 
                     <SkillSum
-                        className={`bg-${skillSumColors[index]}`}
+                        className={`${skillSumColors[index]}`}
                         key={`${props.parent.replace(' ', '-')}-skill-${index}`}
                         skill={skill}
                     />
