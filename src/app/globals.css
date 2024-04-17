@@ -19,6 +19,7 @@
     --color-text: 130 112 94;
     --color-background: 255 247 224;
     --color-primary: 187 220 133;
+    --color-primary-visited: 107 140 53;
     --color-secondary: 232 216 176;
     --color-accent: 255 138 138;
   }
@@ -66,5 +67,6 @@
   :not(.navbar) > a {
     color: rgb(var(--color-primary));
     text-decoration: underline;
+    margin-top: 2rem;
   }
 }
