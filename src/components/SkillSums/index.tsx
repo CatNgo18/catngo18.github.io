@@ -15,7 +15,7 @@ const countSkills = (skills: string[]) => {
             countedSkills[skill] = 1
         }
     };
-
+    
     return countedSkills;
 };
 
@@ -27,9 +27,9 @@ export const SkillSums: React.FunctionComponent<Prop> = props => {
     return (
         <div className="grid grid-cols-4 gap-5 max-w-fit mx-auto my-5">
             {Object.entries(countedSkills)
-            .slice(0, 4) // Top 4 skills
             .sort((a,b) => a[0].localeCompare(b[0])) // Sort alphabetically
             .sort((a,b) => b[1] - a[1]) // Sort by skill tag count
+            .slice(0, 4) // Top 4 skills
             .map((skill: [string, number], index: number) => 
                     <SkillSum
                         className={`${skillSumColors[index]}`}
