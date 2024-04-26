@@ -52,7 +52,7 @@ const projects: Project[] = [
 
 function Projects() {
   return (
-    <div id='projects section'>
+    <div id='projects-section'>
       <h2>
         Projects
       </h2>
