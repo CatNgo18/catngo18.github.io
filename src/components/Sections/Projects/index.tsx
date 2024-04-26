@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { ProjectEntry } from "./ProjectEntry";
 import { SkillSums } from "@/components/SkillSums";
-import { ReactElement } from "react";
 
 export interface Project {
   title: string;
   company: string;
   startDate: string;
   endDate?: string;
-  responsibilities: Array<ReactElement>;
+  responsibilities: string[];
   skills: string[];
 };
 
@@ -19,10 +18,10 @@ const projects: Project[] = [
     startDate: 'August 2022',
     endDate: 'August 2023',
     responsibilities: [
-      <p>Implemented Mentorship functionality, created informational space for Employee Network Groups, and added a personalized company event calendar.</p>,
-      <p>Collaborated with design team and updated UI to be <span>responsive</span> and <span>mobile-friendly</span>.</p>,
-      <p>Edited <span>Docker</span> files to ensure proper deployment of application.</p>,
-      <p>Resulted in <span>200+</span> connections, with about <span>20%</span> of members making 1+ connections.</p>,
+      "<p>Implemented Mentorship functionality, created informational space for Employee Network Groups, and added a personalized company event calendar.</p>",
+      "<p>Collaborated with design team and updated UI to be <span>responsive</span> and <span>mobile-friendly</span>.</p>",
+      "<p>Edited <span>Docker</span> files to ensure proper deployment of application.</p>",
+      "<p>Resulted in <span>200+</span> connections, with about <span>20%</span> of members making 1+ connections.</p>",
     ],
     skills: ['React', 'JavaScript', 'MySQL', 'Docker', 'UI/UX', 'REST APIs'],
   },
@@ -32,9 +31,9 @@ const projects: Project[] = [
     startDate: 'January 2023',
     endDate: 'January 2023',
     responsibilities: [
-      <p><span>Automated</span> FLEXWork employee highlights generation for <span>13,000+</span> employees.</p>,
-      <p>Utilized <span>REST APIs</span> to pull and synthesize employee data.</p>,
-      <p>Provided <span>on-call</span> support for bugs and <span>troubleshooting</span>.</p>,
+      "<p><span>Automated</span> FLEXWork employee highlights generation for <span>13,000+</span> employees.</p>",
+      "<p>Utilized <span>REST APIs</span> to pull and synthesize employee data.</p>",
+      "<p>Provided <span>on-call</span> support for bugs and <span>troubleshooting</span>.</p>",
     ],
     skills: ['React', 'JavaScript', 'REST APIs'],
   },
@@ -44,8 +43,8 @@ const projects: Project[] = [
     startDate: 'June 2021',
     endDate: 'August 2022',
     responsibilities: [
-      <p>Collaborated with Internal Mobility hiring team to identify critical use cases and create <span>Minimum Viable Product (MVP)</span>.</p>,
-      <p>Reduced average time spent reviewing internal mobility eligibility by about <span>20%</span>.</p>,
+      "<p>Collaborated with Internal Mobility hiring team to identify critical use cases and create <span>Minimum Viable Product (MVP)</span>.</p>",
+      "<p>Reduced average time spent reviewing internal mobility eligibility by about <span>20%</span>.</p>",
     ],
     skills: ['React', 'JavaScript', 'MySQL', 'UI/UX'],
   }
