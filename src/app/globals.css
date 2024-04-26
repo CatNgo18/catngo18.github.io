@@ -60,6 +60,9 @@
   h5 {
     color: rgb(var(--color-text) / 50%);
   }
+  p > span {
+    font-weight: 500;
+  }
   a {
     font-family: var(--font-roboto-slab);
     font-weight: 700;

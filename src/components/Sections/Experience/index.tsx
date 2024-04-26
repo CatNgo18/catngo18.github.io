@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { ExperienceEntry } from "./ExperienceEntry";
+import { ReactElement } from "react";
 
 export interface Experience {
   startDate: string;
   endDate?: string;
   jobTitle: string;
   additionalJobTitles?: string[];
-  responsibilities: string[];
+  responsibilities: Array<ReactElement>;
   skills: string[];
+  company: string;
 }
 
 const experiences: Experience[]  = [
@@ -17,14 +19,15 @@ const experiences: Experience[]  = [
     jobTitle: 'Full Stack Software Engineer',
     additionalJobTitles: ['Software Engineering Intern'],
     responsibilities: [
-      "Developed and deployed several web-based and mobile applications using React and Node.js with a focus on enhancing employee experience for all of PANW\'s 13,000+ employees.",
-      "Collaborated cross-functionally with several teams across the company (ex. people, hiring, mentorship) to develop 7 specialized productivity applications and application enhancements.",
-      "Partnered with InfoSec to identify critical application security issues and develop fixes.",
-      "Operational lead for CompTool Internal Mobility Eligibility Validation and FLEXConnect, ensuring all bugs fixed by SLA.",
-      "Coordinated development efforts with team through daily Agile scrum meetings, sprint planning, and CI/CD.",
-      "Generated analytics dashboards using Google Analytics and Looker Studio to analyze and summarize usage statistics of 2 applications.",
+      <p>Developed and deployed several web-based and mobile applications using <span>React</span>, <span>MySQL</span>, and <span>Node.js</span> with a focus on enhancing employee experience for all <span>13,000+</span> employees.</p>,
+      <p>Collaborated <span>cross-functionally</span> with several teams across the company (ex. people, hiring, mentorship) to develop <span>7</span> specialized productivity applications and application enhancements.</p>,
+      <p>Partnered with InfoSec to <span>identify critical application security issues</span> and develop fixes.</p>,
+      <p>Operational lead for CompTool Internal Mobility Eligibility Validation and FLEXConnect, ensuring all bugs fixed by SLA.</p>,
+      <p>Coordinated development efforts with team through daily <span>Agile scrum</span> meetings, sprint planning, and <span>CI/CD</span>.</p>,
+      <p>Generated <span>analytics</span> dashboards using <span>Google Analytics</span> and <span>Looker Studio</span> to analyze and summarize usage statistics of 2 applications.</p>,
     ],
-    skills: ['React', 'JavaScript', 'MySQL', 'CI/CD', 'Agile/Scrum']
+    skills: ['React', 'JavaScript', 'MySQL', 'CI/CD', 'Agile/Scrum'],
+    company: "Palo Alto Networks",
   }
 ]
 

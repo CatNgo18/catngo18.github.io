@@ -10,7 +10,7 @@ export const ExperienceEntry: React.FunctionComponent<Experience> = props => {
             <div className="flex flex-row">
                 <div className="flex-none w-px bg-accent mx-3"/>
                 <div className="shrink">
-                    <h4>{props.jobTitle}</h4>
+                    <h4>{props.company} | {props.jobTitle}</h4>
                     {props.additionalJobTitles?.length && 
                         props.additionalJobTitles.map((title: string, index: number) => 
                             <h5 key={`${props.jobTitle.replace(' ', '-')}-${index}`}>{title}</h5>
