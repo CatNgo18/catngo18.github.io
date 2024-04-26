@@ -39,8 +39,8 @@
   }
   h1 {
     font-family: var(--font-shrikhand);
-    font-size: 4rem;
-    text-shadow: 0px 4px 4px rgb(var(--color-background)/25%), 0 0 0 #000, 0px 4px 4px rgb(var(--color-background)/25%);
+    font-size: min(max(6vw, 4rem), 80px);
+    text-shadow: 0px 4px 4px rgb(var(--color-background)/25%), 0 0 0 #000, 0px 1px 1px rgb(var(--color-background)/50%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;

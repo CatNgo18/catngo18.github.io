@@ -12,6 +12,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "noise": "url('/assets/noise.svg')",
       },
       colors: {
         'text': 'rgb(var(--color-text))',
@@ -36,6 +37,6 @@ const config: Config = {
       }
     }
   },
-  plugins: [],
+  plugins: [require("tailwind-gradient-mask-image")],
 };
 export default config;

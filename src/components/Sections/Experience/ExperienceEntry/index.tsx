@@ -9,7 +9,7 @@ export const ExperienceEntry: React.FunctionComponent<Experience> = props => {
             <h3 className="text-accent font-bold">{`${props.startDate}${props.endDate && `- ${props.endDate}`}`}</h3>
             <div className="flex flex-row">
                 <div className="flex-none w-px bg-accent mx-3"/>
-                <div>
+                <div className="shrink">
                     <h4>{props.jobTitle}</h4>
                     {props.additionalJobTitles?.length && 
                         props.additionalJobTitles.map((title: string, index: number) => 

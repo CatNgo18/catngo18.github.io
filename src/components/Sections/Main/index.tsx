@@ -1,6 +1,6 @@
 function Main() {
     return (
-        <div id='main-section' className='pt-16'>
+        <div id='main-section' className=' h-96 content-center'>
             <h1 className="font-shirkhand">
                 Cattien Ngo
             </h1>
