@@ -30,6 +30,7 @@
     --color-secondary: 94 81 64;
     --color-accent: 153 61 47;
   }
+
   body {
     color: rgb(var(--color-text));
     background: rgb(var(--color-background));
@@ -37,6 +38,7 @@
     font-size: 1.15rem;
     font-weight: 400;
   }
+
   h1 {
     font-family: var(--font-shrikhand);
     font-size: min(max(6vw, 4rem), 80px);
@@ -67,9 +69,31 @@
     font-family: var(--font-roboto-slab);
     font-weight: 700;
   }
+
   :not(.navbar) > a {
     color: rgb(var(--color-primary));
     text-decoration: underline;
     margin-top: 2rem;
+  }
+
+  @supports (scrollbar-color: auto) {
+    :root {
+      scrollbar-color: rgb(var(--color-text)) rgb(var(--color-secondary));
+      scrollbar-width: thin;
+    }
+  }
+
+  @supports selector(::-webkit-scrollbar) {
+    :root::-webkit-scrollbar-thumb {
+      background: rgb(var(--color-text));
+      border-radius: 10px;
+    }
+    :root::-webkit-scrollbar-track {
+      background: rgb(var(--color-secondary));
+      border-radius: 10px;
+    }
+    :root::-webkit-scrollbar {
+      max-width: 10px;
+    }
   }
 }
