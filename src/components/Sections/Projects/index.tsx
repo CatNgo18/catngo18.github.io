@@ -61,7 +61,7 @@ function Projects() {
         {projects.map((project: Project, index: number) => 
           <ProjectEntry {...project} key={`project-${index}`}/>
         )}
-        <Link href="/projects">View Full Project Archive</Link>
+        {/* <Link href="/projects">View Full Project Archive</Link> */}
       </div>
     </div>
   )

@@ -40,7 +40,7 @@ function Experience() {
         {experiences.map((experience: Experience, index: number) => 
           <ExperienceEntry {...experience} key={`experience-${index}`}/>
         )}
-        <Link href="/resume">View Full Resume</Link>
+        {/* <Link href="/resume">View Full Resume</Link> */}
       </div>
     </div>
   )
