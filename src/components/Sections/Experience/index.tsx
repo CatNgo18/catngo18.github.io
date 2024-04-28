@@ -1,4 +1,6 @@
-import Link from "next/link";
+'use client'
+
+import { FiletypePdf } from "@styled-icons/bootstrap";
 import { ExperienceEntry } from "./ExperienceEntry";
 
 export interface Experience {
@@ -40,7 +42,10 @@ function Experience() {
         {experiences.map((experience: Experience, index: number) => 
           <ExperienceEntry {...experience} key={`experience-${index}`}/>
         )}
-        <Link href={"Resume.pdf"} target="_blank">View Full Resume</Link>
+        <div className="rounded-full bg-primary p-4 cursor-pointer flex flex-row gap-2 mt-4 drop-shadow">
+            <p className="font-roboto-slab font-bold text-background">View Resume</p>
+            <FiletypePdf size={24} className="text-background"/>
+        </div>
       </div>
     </div>
   )

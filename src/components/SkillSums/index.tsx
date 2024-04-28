@@ -12,10 +12,10 @@ const countSkills = (skills: string[]) => {
         if (skill in countedSkills) {
             countedSkills[skill]++;
         } else {
-            countedSkills[skill] = 1
+            countedSkills[skill] = 1;
         }
     };
-    
+
     return countedSkills;
 };
 
