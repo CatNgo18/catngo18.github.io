@@ -55,6 +55,7 @@
   h2 {
     font-weight: 700;
     font-size: 2rem;
+    margin-top: 4rem;
   }
   h3 {
     color: rgb(var(--color-accent));
@@ -63,7 +64,7 @@
     color: rgb(var(--color-text) / 50%);
   }
   p > span {
-    font-weight: 500;
+    font-weight: 700;
   }
   a {
     font-family: var(--font-roboto-slab);
