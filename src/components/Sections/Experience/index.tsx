@@ -42,10 +42,10 @@ function Experience() {
         {experiences.map((experience: Experience, index: number) => 
           <ExperienceEntry {...experience} key={`experience-${index}`}/>
         )}
-        <div className="rounded-full bg-primary p-4 cursor-pointer flex flex-row gap-2 mt-4 drop-shadow">
+        <a href="Resume.pdf" className="rounded-full bg-primary p-4 flex flex-row gap-2 mt-4 drop-shadow">
             <p className="font-roboto-slab font-bold text-background">View Resume</p>
             <FiletypePdf size={24} className="text-background"/>
-        </div>
+        </a>
       </div>
     </div>
   )
