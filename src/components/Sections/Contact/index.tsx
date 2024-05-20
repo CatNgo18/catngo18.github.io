@@ -4,7 +4,7 @@ import {Github, Linkedin} from '@styled-icons/bootstrap';
 
 function Contact() {
   return (
-    <div id='contact-section' className="mb-16">
+    <div id='contact-section' className="pb-16 mt-16 bg-secondary/50">
       <div className="flex flex-row gap-10 justify-center mt-10">
         <Linkedin
           size={32}
