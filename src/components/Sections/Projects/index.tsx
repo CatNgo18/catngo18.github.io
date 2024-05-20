@@ -9,9 +9,21 @@ export interface Project {
   endDate?: string;
   responsibilities: string[];
   skills: string[];
+  link?: string;
+  github?: string;
 };
 
 const projects: Project[] = [
+  {
+    title: 'First Discord Bot',
+    company: 'Personal Project',
+    startDate: 'May 2024',
+    responsibilities: [
+      "<p>Implemented a Discord moderation bot that can ban, kick, and timeout users using <span>JavaScript</span> and the <span>Discord API</span>.</p>",
+    ],
+    skills: ['JavaScript', 'REST APIs'],
+    github: 'https://github.com/CatNgo18/first-discord-bot',
+  },
   {
     title: 'FLEXConnect',
     company: 'Palo Alto Networks',

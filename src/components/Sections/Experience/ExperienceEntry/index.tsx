@@ -6,7 +6,7 @@ import { Skills } from "@/components/Skills";
 export const ExperienceEntry: React.FunctionComponent<Experience> = props => {
     return (
         <div className="text-left w-3/5">
-            <h3 className="text-accent font-bold">{`${props.startDate}${props.endDate && `- ${props.endDate}`}`}</h3>
+            <h3 className="text-accent font-bold">{`${props.startDate} - ${props.endDate ?? 'Current'}`}</h3>
             <div className="flex flex-row">
                 <div className="flex-none w-px bg-accent mx-3"/>
                 <div className="shrink overflow-hidden">
