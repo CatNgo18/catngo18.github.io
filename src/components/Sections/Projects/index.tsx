@@ -19,9 +19,10 @@ const projects: Project[] = [
     company: 'Personal Project',
     startDate: 'May 2024',
     responsibilities: [
-      "<p>Implemented a Discord moderation bot that can ban, kick, and timeout users using <span>JavaScript</span> and the <span>Discord API</span>.</p>",
+      "<p>Developed a Discord moderation bot that can ban, kick, and timeout users using <span>JavaScript</span> and the <span>Discord API</span>.</p>",
+      "<p>Implemented a leveling system which stores user levels in a <span>cloud server (MongoDB)</span> and grants users experience points as they chat in the server.</p>"
     ],
-    skills: ['JavaScript', 'REST APIs'],
+    skills: ['JavaScript', 'REST APIs', 'MongoDB'],
     github: 'https://github.com/CatNgo18/first-discord-bot',
   },
   {
