@@ -22,6 +22,7 @@
     --color-primary-visited: 107 140 53;
     --color-secondary: 232 216 176;
     --color-accent: 255 138 138;
+    --hover: linear-gradient(rgb(var(--color-text)/30%) 0 0);
   }
   .dark {
     --color-text: 155 140 127;
@@ -71,10 +72,39 @@
     font-weight: 700;
   }
 
+  .navlink {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  .navlink:hover {
+    filter: brightness(0.8);
+  }
+
+  .button {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  .button:hover {
+    background-image: var(--hover);
+    transform: scale(1.02) translateY(-0.05rem);
+
+  }
+
   :not(.navbar) > a {
     color: rgb(var(--color-primary));
     text-decoration: underline;
     margin-top: 2rem;
+  }
+
+  @media (prefers-reduced-motion) {
+    .button {
+      transition-property: none;
+    }
+    .button:hover {
+      transform: none;
+    }
   }
 
   @supports (scrollbar-color: auto) {
