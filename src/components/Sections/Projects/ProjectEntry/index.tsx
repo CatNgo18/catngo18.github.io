@@ -9,7 +9,7 @@ import { LinkExternal } from "@styled-icons/boxicons-regular";
 
 export const ProjectEntry: React.FunctionComponent<Project> = props => {
     return (
-        <div className="text-left w-3/5 rounded-3xl bg-secondary/25 p-5 pb-1 m-2">
+        <div className="text-left w-3/5 max-lg:w-10/12 rounded-3xl bg-secondary/25 p-5 pb-1 m-2">
             <div className="flex flex-row gap-2">
                 <h3>{props.title}</h3>
                 {props.link &&
