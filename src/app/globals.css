@@ -99,7 +99,7 @@
   }
 
   @media (prefers-reduced-motion) {
-    .button {
+    .button, .navlink {
       transition-property: none;
     }
     .button:hover {
