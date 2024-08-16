@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import withMT from "@material-tailwind/react/utils/withMT";
 
 const config: Config = {
   content: [
@@ -55,4 +56,5 @@ const config: Config = {
   },
   plugins: [require("tailwind-gradient-mask-image")],
 };
-export default config;
+
+export default withMT(config);
