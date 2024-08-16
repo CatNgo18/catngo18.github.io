@@ -10,7 +10,7 @@ function App() {
       styles: {
         base: {
           container: {
-            width: "w-[60vw]",
+            width: "w-[90vw] md:w-[60vw]",
           }
         }
       }
