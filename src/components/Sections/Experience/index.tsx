@@ -4,6 +4,7 @@ import { FiletypePdf } from "@styled-icons/bootstrap";
 import { useState } from "react";
 import PANW from '../../../../public/palo-alto-networks-svgrepo-com.svg';
 import MedTech from '../../../../public/medtech.png';
+import UCI from '../../../../public/uci18_simpleseal_blue_yellow_white.png';
 import { Bullets } from "@/components/Bullets";
 import { Skills } from "@/components/Skills";
 import {
@@ -12,7 +13,6 @@ import {
   AccordionBody,
 } from "../../../app/MTailwind";
 import Image from 'next/image';
-import { LinkExternal } from "@styled-icons/boxicons-regular";
 
 export interface Experience {
   startDate: string;
@@ -29,6 +29,22 @@ export interface Experience {
 
 const experiences: Experience[]  = [
   {
+    startDate: 'January 2021',
+    endDate: 'March 2021',
+    jobTitle: ['Python Tutor', 'January 2021 - March 2021'],
+    additionalJobTitles: [],
+    achievements: [
+      "<p>Received <span>100%</span> satisfactory feedback from students.</p>",
+    ],
+    responsibilities: [
+      "<p>Tutored students in an intermediate <span>Python</span> course, with an average of <span>10</span> students attending each session.</p>"
+    ],
+    skills: ['Python', 'Tutoring'],
+    company: "University of California, Irvine",
+    companyUrl: "https://uci.edu/",
+    logo: UCI,
+  },
+  {
     startDate: 'June 2021',
     endDate: 'December 2023',
     jobTitle: ['Full Stack Software Engineer', 'June 2022 - December 2023'],
@@ -39,7 +55,7 @@ const experiences: Experience[]  = [
     responsibilities: [
       "<p>Collaborated <span>cross-functionally</span> with several teams across the company (ex. people, hiring, mentorship) to develop specialized productivity applications and application enhancements.</p>",
       "<p>Partnered with InfoSec to <span>identify critical application security issues</span> and develop fixes.</p>",
-      "<p>Operational lead for CompTool Internal Mobility Eligibility Validation and FLEXConnect, ensuring all bugs fixed by SLA.</p>",
+      "<p><span>Operational lead</span> for CompTool Internal Mobility Eligibility Validation and FLEXConnect, ensuring all bugs fixed by SLA.</p>",
       "<p>Coordinated development efforts with team through daily <span>Agile scrum</span> meetings, sprint planning, and <span>CI/CD</span>.</p>",
       "<p>Generated <span>analytics</span> dashboards using <span>Google Analytics</span> and <span>Looker Studio</span> to analyze and summarize usage statistics of applications.</p>",
     ],
@@ -89,16 +105,16 @@ function Experience() {
                     </div>
                   </AccordionHeader>
                   <AccordionBody className='px-3 py-0'>
-                      {experience.additionalJobTitles?.map((jobTitle: string[], index: number) => 
-                          <h5 className="text-base" key={index}>{jobTitle[0]} ({jobTitle[1]})</h5>
-                      )}
-                      <h5 className="text-base">{experience.jobTitle[0]} ({experience.jobTitle[1]})</h5>
-                      <div className="pt-2">
+                      <h4>Role(s):
+                        {experience.additionalJobTitles?.map((jobTitle: string[], index: number) => 
+                            <h5 className="text-base" key={index}>{jobTitle[0]} ({jobTitle[1]})</h5>
+                        )}
+                        <h5 className="text-base">{experience.jobTitle[0]} ({experience.jobTitle[1]})</h5>
+                      </h4>
                       <h4>Achievements:</h4>
                       <Bullets parent={experience.jobTitle[0]} bullets={experience.achievements}/>
                       <h4>Responsibilities:</h4>
                       <Bullets parent={experience.jobTitle[0]} bullets={experience.responsibilities}/>
-                      </div>
                     <Skills parent={experience.jobTitle[0]} skills={experience.skills}/>
                   </AccordionBody>
               </Accordion>
