@@ -96,7 +96,7 @@ function Experience() {
       <div className="flex flex-col items-center">
         <div className="my-1">
           {experiences.map((experience: Experience, index: number) => 
-                <Accordion open={open === (index + 1)} key={index} className="text-left mt-4 bg-secondary/25 rounded-3xl">
+                <Accordion open={open === (index + 1)} key={index} className="text-left mt-4 bg-tertiary rounded-3xl drop-shadow">
                   <AccordionHeader onClick={() => handleOpen(index+1)} className="border-b-0 w-full p-6">
                     <div className="flex items-center text-lg">
                       <Image src={experience.logo} alt={`${experience.company} logo`} className="size-12 mr-4"/>

@@ -20,6 +20,7 @@ const config: Config = {
         'background': 'rgb(var(--color-background))',
         'primary': 'rgb(var(--color-primary))',
         'secondary': 'rgb(var(--color-secondary))',
+        'tertiary': 'rgb(var(--color-tertiary))',
         'accent': 'rgb(var(--color-accent))',
       },
       fontSize: {

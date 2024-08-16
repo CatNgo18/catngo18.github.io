@@ -22,6 +22,7 @@
     --color-primary: 187 220 133;
     --color-primary-visited: 107 140 53;
     --color-secondary: 232 216 176;
+    --color-tertiary: 249, 239, 212;
     --color-accent: 255 138 138;
     --hover: linear-gradient(rgb(var(--color-text)/30%) 0 0);
   }
