@@ -99,8 +99,8 @@ function Experience() {
                 <Accordion open={open === (index + 1)} key={index} className="text-left mt-4 bg-tertiary rounded-3xl drop-shadow">
                   <AccordionHeader onClick={() => handleOpen(index+1)} className="border-b-0 w-full p-6">
                     <div className="flex items-center text-lg">
-                      <Image src={experience.logo} alt={`${experience.company} logo`} className="size-12 mr-4"/>
-                      <h3><a href={experience.companyUrl}>{experience.company}</a></h3>
+                      <Image onClick={() => window.open(experience.companyUrl)} src={experience.logo} alt={`${experience.company} logo`} className="size-12 mr-4"/>
+                      <h3 className="hover:underline" onClick={() => window.open(experience.companyUrl)}>{experience.company}</h3>
                       <h5 className="text-sm ml-2">({experience.startDate} - {experience.endDate})</h5>
                     </div>
                   </AccordionHeader>
