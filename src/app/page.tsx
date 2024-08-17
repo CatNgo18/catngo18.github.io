@@ -2,7 +2,7 @@ import Experience from "@/components/Sections/Experience";
 import Main from "../components/Sections/Main";
 import Projects from "@/components/Sections/Projects";
 import Contact from "@/components/Sections/Contact";
-import { accordion, ThemeProvider } from "./MTailwind";
+import { accordion, ThemeProvider, timelineConnector } from "./MTailwind";
 
 function App() {
   const theme = {
@@ -11,6 +11,15 @@ function App() {
         base: {
           container: {
             width: "w-[90vw] md:w-[60vw]",
+          }
+        }
+      }
+    },
+    timelineConnector: {
+      styles: {
+        base: {
+          line: {
+            background: "bg-secondary"
           }
         }
       }

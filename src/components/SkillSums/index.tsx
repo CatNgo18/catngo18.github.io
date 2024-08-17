@@ -25,6 +25,8 @@ export const SkillSums: React.FunctionComponent<Prop> = props => {
     const countedSkills = countSkills(props.skills);
 
     return (
+        <div>
+            <h5 className="text-xl mt-2">Most Used Skills</h5>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-fit px-5 mx-auto  my-5">
             {Object.entries(countedSkills)
             .sort((a,b) => a[0].localeCompare(b[0])) // Sort alphabetically
@@ -39,5 +41,7 @@ export const SkillSums: React.FunctionComponent<Prop> = props => {
                 )
             }
     </div>
+        </div>
+
     );
 };

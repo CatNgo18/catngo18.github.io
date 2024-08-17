@@ -1,6 +1,7 @@
 'use client'
 
-import { FiletypePdf } from "@styled-icons/bootstrap";
+import {FiletypePdf } from "@styled-icons/bootstrap";
+import { ChevronDown } from "@styled-icons/boxicons-regular";
 import { useState } from "react";
 import PANW from '../../../../public/palo-alto-networks-svgrepo-com.svg';
 import MedTech from '../../../../public/medtech.png';
@@ -8,9 +9,12 @@ import UCI from '../../../../public/uci18_simpleseal_blue_yellow_white.png';
 import { Bullets } from "@/components/Bullets";
 import { Skills } from "@/components/Skills";
 import {
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
+  Timeline,
+  TimelineItem,
+  TimelineConnector,
+  TimelineIcon,
+  TimelineHeader,
+  TimelineBody,
 } from "../../../app/MTailwind";
 import Image from 'next/image';
 
@@ -27,7 +31,7 @@ export interface Experience {
   logo: any;
 }
 
-const experiences: Experience[]  = [
+const experiences: Experience[] = [
   {
     startDate: 'January 2021',
     endDate: 'March 2021',
@@ -94,39 +98,47 @@ function Experience() {
         Experience
       </h2>
       <div className="flex flex-col items-center">
-        <div className="my-1">
-          {experiences.map((experience: Experience, index: number) => 
-                <Accordion open={open === (index + 1)} key={index} className="text-left mt-4 bg-tertiary rounded-3xl drop-shadow">
-                  <AccordionHeader onClick={() => handleOpen(index+1)} className="border-b-0 w-full p-6">
-                    <div className="flex items-center text-lg">
-                      <Image onClick={() => window.open(experience.companyUrl)} src={experience.logo} alt={`${experience.company} logo`} className="size-12 mr-4"/>
-                      <h3 className="hover:underline" onClick={() => window.open(experience.companyUrl)}>{experience.company}</h3>
-                      <h5 className="text-sm ml-2">({experience.startDate} - {experience.endDate})</h5>
-                    </div>
-                  </AccordionHeader>
-                  <AccordionBody className='px-3 py-0'>
-                      <h4>Role(s):
-                        {experience.additionalJobTitles?.map((jobTitle: string[], index: number) => 
-                            <h5 className="text-base" key={index}>{jobTitle[0]} ({jobTitle[1]})</h5>
-                        )}
-                        <h5 className="text-base">{experience.jobTitle[0]} ({experience.jobTitle[1]})</h5>
-                      </h4>
-                      <h4>Achievements:</h4>
-                      <Bullets parent={experience.jobTitle[0]} bullets={experience.achievements}/>
-                      <h4>Responsibilities:</h4>
-                      <Bullets parent={experience.jobTitle[0]} bullets={experience.responsibilities}/>
-                    <Skills parent={experience.jobTitle[0]} skills={experience.skills}/>
-                  </AccordionBody>
-              </Accordion>
+        <div className="my-1 w-[85vw] md:w-[60vw]">
+          <Timeline>
+            {experiences.map((experience: Experience, index: number) =>
+              <TimelineItem>
+                {index+1 !== experiences.length && <TimelineConnector/>}
+                <TimelineHeader className="items-start">
+                  <TimelineIcon onClick={() => window.open(experience.companyUrl)} className="bg-transparent cursor-pointer">
+                    <Image src={experience.logo} alt={`${experience.company} logo`} className="size-12" />
+                  </TimelineIcon>
+                  <div className="text-left">
+                    <h3 onClick={() => window.open(experience.companyUrl)} className="hover:underline cursor-pointer">
+                      {experience.company}
+                    </h3>
+                    <h5>
+                      {experience.startDate} - {experience.endDate}
+                    </h5>
+                    <p className="text-base italic">{experience.jobTitle[0]}</p>
+                  </div>
+                  <div onClick={() => handleOpen(index+1)} className={`h-7 w-7 absolute grid right-0 cursor-pointer text-background`}>
+                    <ChevronDown className={`${open === index+1 ? "rotate-180" : ""} transition-transform text-background z-50 row-[1] col-[1]`}/>
+                    <div className="h-full w-full bg-primary rounded-full blur-sm absolute row-[1] col-[1]"/>
+                  </div>
+                </TimelineHeader>
+                <TimelineBody className={`text-left overflow-hidden ${open !== index + 1 ? 'max-h-0' : 'max-h-96'} transition-[max-height]`}>
+                  <h4>Achievements:</h4>
+                  <Bullets parent={experience.jobTitle[0]} bullets={experience.achievements} />
+                  <h4>Responsibilities:</h4>
+                  <Bullets parent={experience.jobTitle[0]} bullets={experience.responsibilities} />
+                  <Skills parent={experience.jobTitle[0]} skills={experience.skills} />
+                </TimelineBody>
+              </TimelineItem>
             )}
+          </Timeline>
         </div>
         <a href="Cattien_Ngo_Resume.pdf" className="rounded-full bg-primary button p-4 flex flex-row gap-2 drop-shadow">
-            <p className="font-roboto-slab font-bold text-background">View Resume</p>
-            <FiletypePdf size={24} className="text-background"/>
+          <p className="font-roboto-slab font-bold text-background">View Resume</p>
+          <FiletypePdf size={24} className="text-background" />
         </a>
       </div>
     </div>
   )
 }
- 
+
 export default Experience
