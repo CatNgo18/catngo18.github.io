@@ -105,7 +105,7 @@ function Experience() {
                 {index+1 !== experiences.length && <TimelineConnector/>}
                 <TimelineHeader className="items-start">
                   <TimelineIcon onClick={() => window.open(experience.companyUrl)} className="bg-transparent cursor-pointer">
-                    <Image src={experience.logo} alt={`${experience.company} logo`} className="size-12" />
+                    <Image src={experience.logo} alt={`${experience.company} logo`} className="size-12 drop-shadow-md" />
                   </TimelineIcon>
                   <div className="text-left">
                     <h3 onClick={() => window.open(experience.companyUrl)} className="hover:underline cursor-pointer">
