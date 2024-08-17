@@ -101,7 +101,7 @@ function Experience() {
         <div className="my-1 w-[85vw] md:w-[60vw]">
           <Timeline>
             {experiences.map((experience: Experience, index: number) =>
-              <TimelineItem>
+              <TimelineItem key={index}>
                 {index+1 !== experiences.length && <TimelineConnector/>}
                 <TimelineHeader className="items-start">
                   <TimelineIcon onClick={() => window.open(experience.companyUrl)} className="bg-transparent cursor-pointer">
