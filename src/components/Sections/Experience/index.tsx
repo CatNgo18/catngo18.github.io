@@ -107,7 +107,7 @@ function Experience() {
                   <TimelineIcon onClick={() => window.open(experience.companyUrl)} className="bg-transparent cursor-pointer">
                     <Image src={experience.logo} alt={`${experience.company} logo`} className="size-12 drop-shadow-md" />
                   </TimelineIcon>
-                  <div className="text-left">
+                  <div className="text-left mr-10">
                     <h3 onClick={() => window.open(experience.companyUrl)} className="hover:underline cursor-pointer">
                       {experience.company}
                     </h3>
