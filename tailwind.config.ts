@@ -17,7 +17,11 @@ const config: Config = {
       },
       colors: {
         'text': 'rgb(var(--color-text))',
-        'background': 'rgb(var(--color-background))',
+        'background': {
+          light: 'rgb(var(--color-background-light))',
+          medium: 'rgb(var(--color-background-medium))',
+          dark: 'rgb(var(--color-background-dark))',
+        },
         'primary': 'rgb(var(--color-primary))',
         'secondary': 'rgb(var(--color-secondary))',
         'tertiary': 'rgb(var(--color-tertiary))',

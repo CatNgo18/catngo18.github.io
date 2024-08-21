@@ -18,11 +18,12 @@
     --gradient-start: var(--color-primary);
     --gradient-end: var(--color-secondary);
     --color-text: 130 112 94;
-    --color-background: 255 247 224;
+    --color-background-light: 255 247 224;
+    --color-background-medium: 249 239 212;
+    --color-background-dark: 232 216 176;
     --color-primary: 187 220 133;
     --color-primary-visited: 107 140 53;
-    --color-secondary: 232 216 176;
-    --color-tertiary: 249, 239, 212;
+    --color-secondary: 255 218 87;
     --color-accent: 255 138 138;
     --hover: linear-gradient(rgb(var(--color-text)/30%) 0 0);
   }
@@ -36,16 +37,22 @@
 
   body {
     color: rgb(var(--color-text));
-    background: rgb(var(--color-background));
+    background: rgb(var(--color-background-light));
     text-align: center;
     font-size: 1.15rem;
     font-weight: 400;
   }
 
+  br {
+    display: block;
+    content: "";
+    margin-top: 0.5rem;
+  }
+
   h1 {
     font-family: var(--font-shrikhand);
-    font-size: min(max(6vw, 4rem), 80px);
-    text-shadow: 0px 4px 4px rgb(var(--color-background)/25%), 0 0 0 #000, 0px 1px 1px rgb(var(--color-background)/50%);
+    font-size: min(max(6vw, 4rem), 100px);
+    text-shadow: 0px 4px 4px rgb(var(--color-background-light)/25%), 0 0 0 #000, 0px 1px 1px rgb(var(--color-background-light)/50%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -62,6 +69,7 @@
   }
   h3 {
     font-size: 1.25rem;
+    line-height: 2rem;
     color: rgb(var(--color-accent));
   }
   h4 {
@@ -97,9 +105,8 @@
     transition-duration: 150ms;
   }
   .button:hover {
-    background-image: var(--hover);
+    background-image: var(--color-primary);
     transform: scale(1.02) translateY(-0.05rem);
-
   }
 
   :not(.navbar) > a {
@@ -125,7 +132,7 @@
 
   @supports (scrollbar-color: auto) {
     :root {
-      scrollbar-color: rgb(var(--color-text)) rgb(var(--color-secondary));
+      scrollbar-color: rgb(var(--color-text)) rgb(var(--color-background-dark));
       scrollbar-width: thin;
     }
   }
@@ -136,7 +143,7 @@
       border-radius: 10px;
     }
     :root::-webkit-scrollbar-track {
-      background: rgb(var(--color-secondary));
+      background: rgb(var(--color-background-dark));
       border-radius: 10px;
     }
     :root::-webkit-scrollbar {

@@ -19,7 +19,7 @@ const countSkills = (skills: string[]) => {
     return countedSkills;
 };
 
-const skillSumColors = ['bg-accent', 'bg-primary', 'bg-text', 'bg-secondary'];
+const skillSumColors = ['bg-accent', 'bg-primary', 'bg-text', 'bg-background-dark'];
 
 export const SkillSums: React.FunctionComponent<Prop> = props => {
     const countedSkills = countSkills(props.skills);
