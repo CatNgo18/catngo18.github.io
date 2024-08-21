@@ -3,6 +3,7 @@ import Main from "../components/Sections/Main";
 import Projects from "@/components/Sections/Projects";
 import Contact from "@/components/Sections/Contact";
 import { accordion, ThemeProvider, timelineConnector } from "./MTailwind";
+import About from "@/components/Sections/About";
 
 function App() {
   const theme = {
@@ -36,6 +37,7 @@ function App() {
             <div className="absolute bg-[#FFDA57] right-1/4 bottom-4 aspect-square w-1/3 min-w-60 rounded-full"/>
           </div>
           <Main/>
+          <About/>
           <Experience/>
           <Projects/>
           <Contact/>
