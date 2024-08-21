@@ -93,7 +93,7 @@ function Experience() {
   const handleOpen = (value: number) => setOpen(open === value ? 0 : value);
 
   return (
-    <div id='experience-section'>
+    <div id='experience-section' className="bg-background-medium w-full pb-10 my-24">
       <h2>
         Experience
       </h2>
@@ -108,7 +108,7 @@ function Experience() {
                     <Image src={experience.logo} alt={`${experience.company} logo`} className="size-12 drop-shadow-md" />
                   </TimelineIcon>
                   <div className="text-left mr-10">
-                    <h3 onClick={() => window.open(experience.companyUrl)} className="hover:underline cursor-pointer">
+                    <h3 onClick={() => window.open(experience.companyUrl)} className="underline cursor-pointer">
                       {experience.company}
                     </h3>
                     <h5>
@@ -116,25 +116,27 @@ function Experience() {
                     </h5>
                     <p className="text-base italic">{experience.jobTitle[0]}</p>
                   </div>
-                  <div onClick={() => handleOpen(index+1)} className={`h-7 w-7 absolute grid right-0 cursor-pointer text-background`}>
-                    <ChevronDown className={`${open === index+1 ? "rotate-180" : ""} transition-transform text-background z-50 row-[1] col-[1]`}/>
+                  <div onClick={() => handleOpen(index+1)} className={`h-7 w-7 absolute grid right-0 cursor-pointer text-background-light`}>
+                    <ChevronDown className={`${open === index+1 ? "rotate-180" : ""} transition-transform text-background-light z-50 row-[1] col-[1]`}/>
                     <div className="h-full w-full bg-primary rounded-full blur-sm absolute row-[1] col-[1]"/>
                   </div>
                 </TimelineHeader>
                 <TimelineBody className={`text-left overflow-hidden ${open !== index + 1 ? 'max-h-0' : 'max-h-96'} transition-[max-height]`}>
                   <h4>Achievements:</h4>
                   <Bullets parent={experience.jobTitle[0]} bullets={experience.achievements} />
+                  <br/>
                   <h4>Responsibilities:</h4>
                   <Bullets parent={experience.jobTitle[0]} bullets={experience.responsibilities} />
+                  <br/>
                   <Skills parent={experience.jobTitle[0]} skills={experience.skills} />
                 </TimelineBody>
               </TimelineItem>
             )}
           </Timeline>
         </div>
-        <a href="Cattien_Ngo_Resume.pdf" className="rounded-full bg-primary button p-4 flex flex-row gap-2 drop-shadow">
-          <p className="font-roboto-slab font-bold text-background">View Resume</p>
-          <FiletypePdf size={24} className="text-background" />
+        <a href="Cattien_Ngo_Resume.pdf" className="text-xl rounded-full bg-primary button p-4 flex flex-row gap-2 drop-shadow">
+          <p className="font-roboto-slab font-bold text-background-light">View Resume</p>
+          <FiletypePdf size={24} className="text-background-light" />
         </a>
       </div>
     </div>
