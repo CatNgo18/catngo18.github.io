@@ -1,6 +1,6 @@
 'use client'
 
-import {FiletypePdf } from "@styled-icons/bootstrap";
+import {Download, FiletypePdf } from "@styled-icons/bootstrap";
 import { ChevronDown } from "@styled-icons/boxicons-regular";
 import { useState } from "react";
 import PANW from '../../../../public/palo-alto-networks-svgrepo-com.svg';
@@ -15,6 +15,7 @@ import {
   TimelineIcon,
   TimelineHeader,
   TimelineBody,
+  Button,
 } from "../../../app/MTailwind";
 import Image from 'next/image';
 
@@ -134,10 +135,13 @@ function Experience() {
             )}
           </Timeline>
         </div>
-        <a href="Cattien_Ngo_Resume.pdf" className="text-xl rounded-full bg-primary button p-4 flex flex-row gap-2 drop-shadow">
-          <p className="font-roboto-slab font-bold text-background-light">View Resume</p>
-          <FiletypePdf size={24} className="text-background-light" />
+        <a href="Cattien_Ngo_Resume.pdf">
+        <Button>
+          View Resume
+          <Download size={16} className="text-background-light" />
+        </Button>
         </a>
+
       </div>
     </div>
   )

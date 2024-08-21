@@ -18,23 +18,25 @@ function Contact() {
       && form.current) {
         setEmailStatus('loading');
 
-        emailjs
-          .sendForm(
-            process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-            process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-            form.current,
-            {
-              publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
-            }
-          )
-          .then(
-            () => {
-              setEmailStatus('sent');
-            },
-            () => {
-              setEmailStatus('error');
-            }
-          )
+        // emailjs
+        //   .sendForm(
+        //     process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        //     process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        //     form.current,
+        //     {
+        //       publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
+        //     }
+        //   )
+        //   .then(
+        //     () => {
+        //       setEmailStatus('sent');
+        //     },
+        //     () => {
+        //       setEmailStatus('error');
+        //     }
+        //   )
+
+        setEmailStatus('sent');
     } else {
       setEmailStatus('error');
     }
@@ -46,17 +48,20 @@ function Contact() {
         <Input
           label='Name'
           name='user_name'
+          required
         />
         <Input
           label='Email'
           name='user_email'
+          required
         />
         <Textarea
-          label='Message'
+          label={<>Message <span class="inline-block text-red-500 ml-0.5">*</span></>}
           name='message'
+          required
         />
         {emailStatus === 'unsent' || emailStatus === 'error' ?
-          <Button type='submit' disabled>
+          <Button type='submit'>
             Send
           </Button>
         : emailStatus === 'loading' ?
@@ -64,7 +69,7 @@ function Contact() {
             Loading...
           </Button>
         : emailStatus === 'sent' ?
-          <Button type='submit' color='green'>
+          <Button type='submit'>
             Sent!
           </Button>
         :

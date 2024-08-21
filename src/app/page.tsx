@@ -2,7 +2,7 @@ import Experience from "@/components/Sections/Experience";
 import Main from "../components/Sections/Main";
 import Projects from "@/components/Sections/Projects";
 import Contact from "@/components/Sections/Contact";
-import { input, ThemeProvider, timelineConnector } from "./MTailwind";
+import { button, input, textarea, ThemeProvider, timelineConnector, TimelineConnector } from "./MTailwind";
 import About from "@/components/Sections/About";
 
 function App() {
@@ -18,25 +18,84 @@ function App() {
     },
     input: {
       defaultProps: {
-        color: "custom"
+        color: "text",
+      },
+      valid: {
+        colors: ['text'],
       },
       styles: {
         variants: {
           outlined: {
             colors: {
               input: {
-                custom: {
+                text: {
                   color: "text-text",
-                  borderColor: "border-text",
+                  borderColor: "border-text placeholder-shown:border-text placeholder-shown:border-t-text",
                   borderColorFocused: "focus:border-text",
                 }
               },
               label: {
-                custom: {
-                  color: "text-text peer-focus:text-text",
-                  after: "after:border-text peer-focus:after:border-text",
+                text: {
+                  color: "!text-text peer-focus:text-text",
+                  before: "before:border-text peer-focus:before:!border-text",
+                  after: "after:border-text peer-focus:after:!border-text",
                 }
               }
+            }
+          }
+        }
+      }
+    },
+    textarea: {
+      defaultProps: {
+        color: "text"
+      },
+      valid: {
+        colors: ['text'],
+      },
+      styles: {
+        variants: {
+          outlined: {
+            colors: {
+              textarea: {
+                text: {
+                  color: "text-text",
+                  borderColor: "border-text placeholder-shown:border-text placeholder-shown:border-t-text",
+                  borderColorFocused: "focus:border-text"
+                }
+              },
+              label: {
+                text: {
+                  color: "!text-text peer-focus:text-text",
+                  before: "before:border-text peer-focus:before:!border-text",
+                  after: "after:border-text peer-focus:after:!border-text",
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    button: {
+      defaultProps: {
+        color: 'primary',
+        className: 'rounded-xl flex gap-2'
+      },
+      valid: {
+        colors: ['primary'],
+      },
+      styles: {
+        base: {
+          initial: {
+            fontFamily: 'font-roboto-slab',
+          }
+        },
+        variants: {
+          filled: {
+            primary: {
+              background: 'bg-primary',
+              color: 'text-background-light',
+              hover: 'hover:drop-shadow',
             }
           }
         }
