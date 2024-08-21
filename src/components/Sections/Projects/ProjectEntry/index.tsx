@@ -20,7 +20,7 @@ export const ProjectEntry: React.FunctionComponent<ProjectEntryProps> = ({projec
     }
 
     return (
-        <div className="w-[90vw] md:w-[60vw] rounded-3xl bg-background-medium m-2 overflow-hidden">
+        <div className="w-[90vw] md:w-[60vw] rounded-3xl bg-background-medium m-2 overflow-hidden drop-shadow">
             {/* Info Section */}
             <div>
                 <ImageSection />
