@@ -6,7 +6,7 @@ interface Prop {
 }
 
 const countSkills = (skills: string[]) => {
-    let countedSkills: {[index: string]: number} = {};
+    let countedSkills: { [index: string]: number } = {};
 
     for (var skill of skills) {
         if (skill in countedSkills) {
@@ -26,21 +26,20 @@ export const SkillSums: React.FunctionComponent<Prop> = props => {
 
     return (
         <div>
-            <h5 className="text-xl mt-2">Most Used Skills</h5>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-fit px-5 mx-auto  my-5">
-            {Object.entries(countedSkills)
-            .sort((a,b) => a[0].localeCompare(b[0])) // Sort alphabetically
-            .sort((a,b) => b[1] - a[1]) // Sort by skill tag count
-            .slice(0, 4) // Top 4 skills
-            .map((skill: [string, number], index: number) => 
-                    <SkillSum
-                        className={`${skillSumColors[index]}`}
-                        key={`${props.parent.replace(' ', '-')}-skill-${index}`}
-                        skill={skill}
-                    />
-                )
-            }
-    </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-fit px-5 mx-auto my-5">
+                {Object.entries(countedSkills)
+                    .sort((a, b) => a[0].localeCompare(b[0])) // Sort alphabetically
+                    .sort((a, b) => b[1] - a[1]) // Sort by skill tag count
+                    .slice(0, 4) // Top 4 skills
+                    .map((skill: [string, number], index: number) =>
+                        <SkillSum
+                            className={`${skillSumColors[index]}`}
+                            key={`${props.parent.replace(' ', '-')}-skill-${index}`}
+                            skill={skill}
+                        />
+                    )
+                }
+            </div>
         </div>
 
     );
