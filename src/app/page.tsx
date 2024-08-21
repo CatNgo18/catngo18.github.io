@@ -2,25 +2,42 @@ import Experience from "@/components/Sections/Experience";
 import Main from "../components/Sections/Main";
 import Projects from "@/components/Sections/Projects";
 import Contact from "@/components/Sections/Contact";
-import { accordion, ThemeProvider, timelineConnector } from "./MTailwind";
+import { input, ThemeProvider, timelineConnector } from "./MTailwind";
 import About from "@/components/Sections/About";
 
 function App() {
   const theme = {
-    accordion: {
-      styles: {
-        base: {
-          container: {
-            width: "w-[90vw] md:w-[60vw]",
-          }
-        }
-      }
-    },
     timelineConnector: {
       styles: {
         base: {
           line: {
-            background: "bg-secondary"
+            background: "!bg-background-dark"
+          }
+        }
+      }
+    },
+    input: {
+      defaultProps: {
+        color: "custom"
+      },
+      styles: {
+        variants: {
+          outlined: {
+            colors: {
+              input: {
+                custom: {
+                  color: "text-text",
+                  borderColor: "border-text",
+                  borderColorFocused: "focus:border-text",
+                }
+              },
+              label: {
+                custom: {
+                  color: "text-text peer-focus:text-text",
+                  after: "after:border-text peer-focus:after:border-text",
+                }
+              }
+            }
           }
         }
       }
@@ -28,7 +45,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col *:z-10">
+    <div className="flex flex-col *:z-10 items-center">
         <ThemeProvider value={theme}>
           <div className="absolute bg-accent w-full h-96 z-0 *:z-0 gradient-mask-b-0 *:blur-xl">      
             <div className="absolute bg-primary -top-4 aspect-square w-1/3 min-w-60 rounded-full"/>
