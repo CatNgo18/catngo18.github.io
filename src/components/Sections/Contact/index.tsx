@@ -46,11 +46,13 @@ function Contact() {
       <h2>Let&#39;s Talk!</h2>
       <form ref={form} onSubmit={sendEmail} className='w-2/3 max-w-2xl mx-auto flex flex-col gap-2 items-center mt-5'>
         <Input
+          crossOrigin={""}
           label='Name'
           name='user_name'
           required
         />
         <Input
+          crossOrigin={""}
           label='Email'
           name='user_email'
           required
