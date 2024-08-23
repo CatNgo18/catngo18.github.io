@@ -41,10 +41,11 @@ function Contact() {
       setEmailStatus('error');
     }
   }
+
   return (
     <div id='contact-section' className="pb-16 mt-16 bg-background-dark/50 w-full">
       <h2>Let&#39;s Talk!</h2>
-      <form ref={form} onSubmit={sendEmail} className='w-2/3 max-w-2xl mx-auto flex flex-col gap-2 items-center mt-5'>
+      {/* <form ref={form} onSubmit={sendEmail} className='w-2/3 max-w-2xl mx-auto flex flex-col gap-2 items-center mt-5'>
         <Input
           crossOrigin={""}
           label='Name'
@@ -82,7 +83,7 @@ function Contact() {
           Could not send your message. Please try again later.
         </p>
         }
-      </form>
+      </form> */}
       <div className="flex flex-row gap-10 mt-10 justify-center">
         <Linkedin
           size={32}
