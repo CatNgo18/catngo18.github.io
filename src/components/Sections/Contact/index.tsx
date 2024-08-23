@@ -56,7 +56,7 @@ function Contact() {
           required
         />
         <Textarea
-          label={<>Message <span class="inline-block text-red-500 ml-0.5">*</span></>}
+          label={<>Message <span className="inline-block text-red-500 ml-0.5">*</span></>}
           name='message'
           required
         />
