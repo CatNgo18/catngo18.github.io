@@ -56,7 +56,44 @@ const config: Config = {
   
         '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
-      }  
+      },
+      animation: {
+        circle: 'circle 5s infinite linear',
+        mesh1: 'mesh1 20s infinite linear',
+        mesh2: 'mesh2 20s infinite linear',
+        mesh3: 'mesh3 20s infinite linear',
+        mesh4: 'mesh4 20s infinite linear',
+      },
+      keyframes: {
+        circle: {
+          '0%': { 
+            transform: 'rotate(0deg) translateY(1rem) rotate(0deg)',
+          },
+          '100%': { 
+            transform: 'rotate(360deg) translateY(1rem) rotate(-360deg)',
+          } 
+        },
+        mesh1: {
+          '0%': {
+            left: '0',
+          },
+          '50%': { 
+            left: 'calc(100% - 100px)',
+          },
+          '100%': {
+            left: '0',
+          }
+        },
+        mesh2: {
+
+        },
+        mesh3: {
+
+        },
+        mesh4: {
+
+        }
+      }
     }
   },
   plugins: [require("tailwind-gradient-mask-image")],

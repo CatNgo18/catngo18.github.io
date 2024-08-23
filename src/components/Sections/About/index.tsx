@@ -9,7 +9,7 @@ function About() {
         <div id="about-section" className="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center items-center m-10 w-1/2 max-w-4xl">
             <div className="relative w-[256px] h-[256px] flex-none">
                 <Image src={me} width={256} height={256} alt="picture of me" className="drop-shadow top-0 left-0 absolute rounded-full row-[1] col-[1]"/>
-                <div className="top-0 right-0 -z-50 absolute w-[260px] h-[260px] bg-accent blur-xl rounded-full"/>
+                <div className="animate-circle top-0 right-0 -z-50 absolute w-[260px] h-[260px] bg-accent blur-xl rounded-full"/>
             </div>
             <div className="text-center lg:text-left">
                 <h2 className="text-3xl m-auto lg:m-0 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent w-fit">Hey, nice to meet you!</h2>
