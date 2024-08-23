@@ -39,10 +39,10 @@ const experiences: Experience[] = [
     jobTitle: ['Python Tutor', 'January 2021 - March 2021'],
     additionalJobTitles: [],
     achievements: [
-      "<p>Received <span>100%</span> satisfactory feedback from students.</p>",
+      "Received <span>100%</span> satisfactory feedback from students.",
     ],
     responsibilities: [
-      "<p>Tutored students in an intermediate <span>Python</span> course, with an average of <span>10</span> students attending each session.</p>"
+      "Tutored students in an intermediate <span>Python</span> course, with an average of <span>10</span> students attending each session."
     ],
     skills: ['Python', 'Tutoring'],
     company: "University of California, Irvine",
@@ -55,14 +55,14 @@ const experiences: Experience[] = [
     jobTitle: ['Full Stack Software Engineer', 'June 2022 - December 2023'],
     additionalJobTitles: [['Software Engineering Intern', 'June 2021 - June 2022']],
     achievements: [
-      "<p>Developed and deployed <span>7</span> web-based and mobile applications using <span>React</span>, <span>MySQL</span>, and <span>Node.js</span> with a focus on enhancing employee experience for all <span>13,000+</span> employees.</p>",
+      "Developed and deployed <span>7</span> web-based and mobile applications using <span>React</span>, <span>MySQL</span>, and <span>Node.js</span> with a focus on enhancing employee experience for all <span>13,000+</span> employees.",
     ],
     responsibilities: [
-      "<p>Collaborated <span>cross-functionally</span> with several teams across the company (ex. people, hiring, mentorship) to develop specialized productivity applications and application enhancements.</p>",
-      "<p>Partnered with InfoSec to <span>identify critical application security issues</span> and develop fixes.</p>",
-      "<p><span>Operational lead</span> for CompTool Internal Mobility Eligibility Validation and FLEXConnect, ensuring all bugs fixed by SLA.</p>",
-      "<p>Coordinated development efforts with team through daily <span>Agile scrum</span> meetings, sprint planning, and <span>CI/CD</span>.</p>",
-      "<p>Generated <span>analytics</span> dashboards using <span>Google Analytics</span> and <span>Looker Studio</span> to analyze and summarize usage statistics of applications.</p>",
+      "Collaborated <span>cross-functionally</span> with several teams across the company (ex. people, hiring, mentorship) to develop specialized productivity applications and application enhancements.",
+      "Partnered with InfoSec to <span>identify critical application security issues</span> and develop fixes.</p>",
+      "<span>Operational lead</span> for CompTool Internal Mobility Eligibility Validation and FLEXConnect, ensuring all bugs fixed by SLA.",
+      "Coordinated development efforts with team through daily <span>Agile scrum</span> meetings, sprint planning, and <span>CI/CD</span>.",
+      "Generated <span>analytics</span> dashboards using <span>Google Analytics</span> and <span>Looker Studio</span> to analyze and summarize usage statistics of applications.",
     ],
     skills: ['React', 'JavaScript', 'MySQL', 'CI/CD', 'Agile/Scrum'],
     company: "Palo Alto Networks",
@@ -74,12 +74,12 @@ const experiences: Experience[] = [
     endDate: 'Current',
     jobTitle: ['Freelance Automation Software Engineer', 'July 2024 - Current'],
     achievements: [
-      "<p>Developed and built applications to parse <span>1000's</span> of medical documents in a <span>few seconds</span>.</p>",
+      "Developed and built applications to parse <span>1000's</span> of medical documents in a <span>few seconds</span>.",
     ],
     responsibilities: [
-      "<p>Developed <span>Python</span> scripts to parse, sort, and merge documents.</p>",
-      "<p>Authored instructional README's and <span>documentation</span> so that non-technical staff would be able to understand and use the application.</p>",
-      "<p>Provided on-call <span>customer support</span> and resolved issues in a timely manner.</p>",
+      "Developed <span>Python</span> scripts to parse, sort, and merge documents.",
+      "Authored instructional README's and <span>documentation</span> so that non-technical staff would be able to understand and use the application.",
+      "Provided on-call <span>customer support</span> and resolved issues in a timely manner.",
     ],
     skills: ['Python', 'Documentation', 'Customer Service'],
     company: "MedTech Billing Services",
