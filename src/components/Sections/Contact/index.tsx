@@ -18,23 +18,23 @@ function Contact() {
       && form.current) {
         setEmailStatus('loading');
 
-        // emailjs
-        //   .sendForm(
-        //     process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-        //     process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-        //     form.current,
-        //     {
-        //       publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
-        //     }
-        //   )
-        //   .then(
-        //     () => {
-        //       setEmailStatus('sent');
-        //     },
-        //     () => {
-        //       setEmailStatus('error');
-        //     }
-        //   )
+        emailjs
+          .sendForm(
+            process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+            process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+            form.current,
+            {
+              publicKey: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
+            }
+          )
+          .then(
+            () => {
+              setEmailStatus('sent');
+            },
+            () => {
+              setEmailStatus('error');
+            }
+          )
 
         setEmailStatus('sent');
     } else {
@@ -56,7 +56,7 @@ function Contact() {
           required
         />
         <Textarea
-          label={<>Message <span className="inline-block text-red-500 ml-0.5">*</span></>}
+          label='Message'
           name='message'
           required
         />
